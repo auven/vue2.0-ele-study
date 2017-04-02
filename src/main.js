@@ -14,12 +14,14 @@ Vue.use(VueRouter);
 Vue.use(VueResource);
 /* eslint-disable no-new */
 const routes = [
+  { path: '/', component: goods },
   { path: '/goods', component: goods },
   { path: '/ratings', component: ratings },
   { path: '/seller', component: seller }
 ];
 
 const router = new VueRouter({
+  mode: 'history',
   linkActiveClass: 'active',
   routes
 });
